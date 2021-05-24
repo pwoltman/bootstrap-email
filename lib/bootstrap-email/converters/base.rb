@@ -44,11 +44,11 @@ module BootstrapEmail
       end
 
       def margin_top?(node)
-        node['class'].to_s.match?(/m[ty]{1}-(lg-)?\d+/)
+        !(node['class'].to_s =~ /m[ty]{1}-(lg-)?\d+/).nil?
       end
 
       def margin_bottom?(node)
-        node['class'].to_s.match?(/m[by]{1}-(lg-)?\d+/)
+        !(node['class'].to_s =~ /m[by]{1}-(lg-)?\d+/).nil?
       end
 
       def table?(node)
